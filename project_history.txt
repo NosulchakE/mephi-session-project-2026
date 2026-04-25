@@ -1,0 +1,77 @@
+    1  exit
+    2  ip link show
+    3  nmsli device status
+    4  nmcli device status
+    5  ip a
+    6  exit
+    7  nmcli device status
+    8  ip a
+    9  exit
+   10  nmcli device status
+   11  ip addr show wlp0s20f3
+   12  ip route show defoult
+   13  ip route show default
+   14  sudo nmcli connection modify "Info-lan 855088 5g" ipv.method auto
+   15  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.method auto
+   16  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.addresses ""
+   17  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.method manual
+   18  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.addresses "192.168.1.100/24"
+   19  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.gateway "192.168.1.1"
+   20  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.dns "8.8.8.8.8.8.4.4"
+   21  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.dns "8.8.8.8.8"
+   22  sudo nmcli connection down "Info-lan 855088 5g"
+   23  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.method manual 
+   24  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.addresses "192.168.1.100/24"
+   25  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.gateway "192.168.1.1"
+   26  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.dns "8.8.8.8 8.8.4.4"
+   27  sudo nmcli connection up "Info-lan 855088 5g"
+   28  ip link show
+   29  nmcli device status
+   30  ip addr show wlp 0s20f3
+   31  ip addr show wlp0s20f3
+   32  ip route show
+   33  ping -c 4 192.168.1.1
+   34  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.method auto
+   35  sudo nmcli connection modify "Info-lan 855088 5g" ipv4.addresses ""
+   36  sudo poweroff
+   37  nmcli device status
+   38  ip link show
+   39  nmcli device status
+   40  sudopoweroff
+   41  sudo poweroff
+   42  ls -la /data/mrphi-web
+   43  ls -la /data/mephi-web
+   44  df -h | grep mephi
+   45  sudo poweroff
+   46  ip link show
+   47  getenforce
+   48  rpm -q policycoreutils-python-utils
+   49  semanage --help
+   50  sudo semanage fcontext -s -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+   51  sudo semanage fcontext -a -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+   52  sudo restorecon -RV /data/mephi-web
+   53  sudo restorecon -Rv /data/mephi-web
+   54  ls -Zd /data/mephi-web
+   55  sudo chmod u-s /usr/sbin/tcpdump 2> /dev/null
+   56  sudo setcap cap_net_raw,cap_net_admin+eip /usr/sbin/tcpdump
+   57  getcap /usr/sbin/tcpdump
+   58  sudo -u mephi-admin tcpdump --help
+   59  sudo sed -i 's|root /usr/share/nginx/html;|root /data/mephi-web;|' /etc/nginx/nginx.conf 
+   60  sudo systemctl restart nginx
+   61  grep "root /data/mephi-web" /etc/nginx/nginx.conf
+   62  ls -la /etc/nginx/nginx.conf
+   63  cat -n /etc/nginx/nginx.conf
+   64  echo 'root' | sudo tee /etc/ssh/denied_users
+   65  sudo sed -i '1i auth recuired pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=succeed' /etc/pam.d/sshd
+   66  echo 'PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config
+   67  sudo systemctl restart sshd
+   68  echo 'Hello from Student: ДН055' | sudo tee /data/mephi-web/index.html
+   69  curl http://localhost
+   70  curl http://192.168.0.100
+   71  curl http://localhost
+   72  sudo poweroff
+   73  grep -n "root" /etc/nginx/nginx.conf
+   74  sudo poweroff
+   75  sudo dnf download tcpdump --destdir /tmp
+   76  sudo cp /tmp/tcpdump*.rpm ~/tcpdump.rpm
+   77  history > ~/project_history.txt
